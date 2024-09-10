@@ -54,6 +54,7 @@ export default function SideMenu({ showSideMenu, lng }) {
                   <button
                     onClick={() => {
                       setMode("dark");
+                      sessionStorage.setItem('mode', 'dark')
                     }}
                     className={`${mode === 'dark' ? 'hover:bg-slate-700' : 'hover:bg-gray-100'} block rounded-lg px-4 py-2 text-sm font-medium`}
                   >
@@ -65,6 +66,7 @@ export default function SideMenu({ showSideMenu, lng }) {
                   <button
                     onClick={() => {
                       setMode("light");
+                      sessionStorage.setItem('mode', 'light')
                     }}
                     className={`${mode === 'dark' ? 'hover:bg-slate-700' : 'hover:bg-gray-100'} block rounded-lg px-4 py-2 text-sm font-medium`}
                   >

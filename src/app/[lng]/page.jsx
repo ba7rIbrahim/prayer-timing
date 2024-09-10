@@ -14,8 +14,8 @@ import axios from "axios";
 export default function Home({ params: { lng } }) {
   const [response, setResponse] = useState([]);
   const [country, setCountry] = useState("Baghdad");
-  const [mode, setMode] = useState(sessionStorage.getItem('mode') !== 'null' ? sessionStorage.getItem('mode') : 'light');
-
+  const [mode, setMode] = useState('light');
+  
   useEffect(() => {
     axios
       .get(
@@ -31,10 +31,6 @@ export default function Home({ params: { lng } }) {
 
 
 
-
-  useEffect(() => {
-    sessionStorage.setItem('mode', mode)
-  }, [mode]);
 
   return (
     <div>
